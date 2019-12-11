@@ -1,0 +1,1 @@
+function bulb(){}const express=require("express"),router=express.Router();router.post("/bulb",function(e,t){var u=new Date,o=u.getHours(),r=u.getMinutes(),s=u.getSeconds(),n=u.getFullYear(),b=u.getMonth()+1,l=u.getDate(),i=n+"-"+b+"-"+l,a=o+":"+r+":"+s,g=e.body.bulb,p=new bulb;p.status=""+g,p.date=""+i,p.time=""+a,io.emit("Bulb",p),t.json(p)}),module.exports=router;
